@@ -1,0 +1,41 @@
+.Question .answers {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: start;
+}
+
+.Question .answer {
+    border: 1px solid #4D5B9E;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Question input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.Question input:disabled + .answer {
+    opacity: .5;
+}
+
+.Question input:checked + .answer {
+    border: 1px solid #D6DBF5;
+    background-color: #D6DBF5;
+}
+
+.Question.gameOver input:checked + .answer {
+    background-color: #F8BCBC;
+    border-color: #F8BCBC;
+}
+
+.Question .answer.correct {
+    background-color: #94D7A2 !important;
+    border-color: #94D7A2 !important;
+    opacity: 1 !important;
+}
